@@ -1,0 +1,28 @@
+{
+    "name": "ahuggins/laravel-opensearch",
+    "description": "Quickly add the ability for people to search your site in Chrome address bar using OpenSearch. Like when you type an address and press 'space' Chrome searches the site, this package adds that.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Huggins",
+            "email": "andrewhuggins@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "AHuggins\\OpenSearch\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AHuggins\\OpenSearch\\Providers\\OpenSearchServiceProvider"
+            ],
+            "aliases": {
+                "OpenSearch": "AHuggins\\OpenSearch\\OpenSearch"
+            }
+        }
+    }
+}
