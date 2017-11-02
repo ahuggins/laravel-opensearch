@@ -34,8 +34,14 @@ In order for this to work, you need to add the following to the `<head>` section
 
 ### TODO: Need to finish this up
 
-* Create (or tie into) a basic search functionality
+1. Create (or tie into) a basic search functionality
     * Or create a way to make it easy to customize to any app.
+
+1. There is a way to default the search to Google, with a limiter for the domain that you desire.
+    * This is an ok default...but isn't particularly great either.
+    * I'm not a huge fan of redirecting this to Google
+    * It is much preferred to figure a better default for Item #1 in this list.
+
 
 
 
