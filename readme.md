@@ -42,6 +42,9 @@ In order for this to work, you need to add the following to the `<head>` section
     * I'm not a huge fan of redirecting this to Google
     * It is much preferred to figure a better default for Item #1 in this list.
 
+1. Add a sweet GIF to this readme, showing the end result of what this package adds.
+    * I feel like people are not fully aware what "open-search" actually means
+
 
 
 
