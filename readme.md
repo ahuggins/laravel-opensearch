@@ -32,3 +32,10 @@ In order for this to work, you need to add the following to the `<head>` section
 
 `{{ OpenSearch::load() }}`
 
+### TODO: Need to finish this up
+
+* Create (or tie into) a basic search functionality
+    * Or create a way to make it easy to customize to any app.
+
+
+
