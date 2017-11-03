@@ -39,7 +39,7 @@ This puts a `opensearch.php` file in your apps `config` folder.
 
 In order for this to work, you need to add the following to the `<head>` section of your app layout or your base blade file:
 
-`{{ OpenSearch::load() }}`
+`{!! OpenSearch::load() !!}`
 
 ### TODO: Need to finish this up
 
