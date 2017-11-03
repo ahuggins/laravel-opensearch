@@ -2,6 +2,8 @@
 
 You know when you go to Amazon.com or Google.com, you type in the domain, hit space, and the whole address bar becomes a "search field"? If you have wanted to add that to your site, then this package will make it super easy.
 
+> Note: The "name" of your site, should be set in the `config/app.php` file **BEFORE** you load this package on your site. Google (and other search engines) cache the opensearch.xml file on your site (one of the things provided by this package) pretty aggressively, so it can be a while before it updates.
+
 # Without OpenSearch
 
 ![2017-11-02 21 54 09](https://user-images.githubusercontent.com/1791228/32358118-8f199dce-c019-11e7-8598-d47e4df4c8b2.gif)
@@ -41,19 +43,61 @@ In order for this to work, you need to add the following to the `<head>` section
 
 `{!! OpenSearch::load() !!}`
 
-### TODO: Need to finish this up
+## Notes
 
-1. Create (or tie into) a basic search functionality
-    * Or create a way to make it easy to customize to any app.
+This package does not provide a "search" functionality to your site. It just makes adding the Chrome ability to search from the address bar. You will have to connect the route to your search route/view.
 
-1. There is a way to default the search to Google, with a limiter for the domain that you desire.
-    * This is an ok default...but isn't particularly great either.
-    * I'm not a huge fan of redirecting this to Google
-    * It is much preferred to figure a better default for Item #1 in this list.
+You can customize this using the provided config (provided you publish it, see above).
 
-1. Add a sweet GIF to this readme, showing the end result of what this package adds.
-    * I feel like people are not fully aware what "open-search" actually means
+```
+// The config options
 
+'search_route' => 'search',
+'query_param' => 'q',
+'description' => [
+    'before_name' => 'Search',
+    'after_name' => '',
+],
+'title' => 'Search Site',
+'xml_route' => 'opensearch.xml',
+'favicon' => [
+    'type' => 'image/x-icon',
+    'path' => 'favicon.ico',
+]
+```
 
+#### `search_route`
 
+This is whatever your actual app's search route would be `yoururl.com/{yoursearchroute}`.
 
+#### `query_param`
+
+If you use something other than `q` as your query param, designate it here.
+
+#### `description`
+
+This is used to "decorate" the "name" of your site in the search box. 
+
+###### `before_name`
+
+the Before Name, will be placed before the "name" of your site.
+
+> Note: The "name" of your site, should be set in the `config/app.php` file BEFORE you load this package on your site. Google (and other search engines) cache the opensearch.xml file on your site (one of the things provided by this package) pretty aggressively, so it can be a while before it updates.
+
+###### `after_name`
+
+Like Before Name, but this comes "after" the name of your site. 
+
+#### `title`
+
+Title is only really used in the output of the link to the `opensearch.xml` file. You can see it in the head section (or wherever you output the `::load()` call). `Search Site` should be a good default for most sites...but if you want to override it. Do so with this option in the `config/opensearch.xml` file.
+
+#### `xml_route`
+
+If for some reason you have a need to change from the default `opensearch.xml` do so here. It's basically what search engines look for for this definition.
+
+#### `favicon`
+
+Specify the path to the favicon and the `type` below. `type` is usually going to be `image/x-icon` or `image/png`. Just be sure you have the right type for the right type of favicon.
+
+> Currently this package only supports a single favicon, but this package also accepts Pull Requests! (hint hint)
