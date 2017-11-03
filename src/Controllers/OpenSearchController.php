@@ -14,7 +14,8 @@ class OpenSearchController extends Controller
             'route' => config('opensearch.route', 'search'),
             'query_param' => config('opensearch.query_param', 'q'),
             'route_string' => config('app.url') . '/' . config('opensearch.search_route', 'search') . '?' . config('opensearch.query_param', 'q') . '={searchTerms}',
-            'description' => config('opensearch.description')
+            'description' => config('opensearch.description'),
+            'favicon' => config('opensearch.favicon')
         ]);
     }
 }
