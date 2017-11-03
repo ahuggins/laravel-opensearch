@@ -2,6 +2,15 @@
 
 You know when you go to Amazon.com or Google.com, you type in the domain, hit space, and the whole address bar becomes a "search field"? If you have wanted to add that to your site, then this package will make it super easy.
 
+# Without OpenSearch
+
+![2017-11-02 21 54 09](https://user-images.githubusercontent.com/1791228/32358118-8f199dce-c019-11e7-8598-d47e4df4c8b2.gif)
+
+# WITH OpenSearch
+![2017-11-02 21 57 50](https://user-images.githubusercontent.com/1791228/32358119-8f42627c-c019-11e7-994e-bd88dac032a7.gif)
+
+> Note: While the "WITH" OpenSearch Gif shows a "Whoops" That is only because my test/example site, does not have a 'search' route. Notice too, that the url does route to the "customizable" search route.
+
 ## Installation
 
 This was made after release of 5.5, which is what it was built with, so I'll say it supports Laravel 5.5+, but really it probably is good on Laravel 5+.
