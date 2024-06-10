@@ -4,7 +4,7 @@ namespace AHuggins\OpenSearch;
 
 class OpenSearch
 {
-    public function load()
+    public static function load()
     {
         return view('opensearch::load');
     }
